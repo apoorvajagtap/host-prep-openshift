@@ -6,7 +6,7 @@ import subprocess as sb
 def main_funtion(ip):
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect(ip, port=22, username='root', password='redhat')
+        ssh.connect(ip, port=22, username='root', password='password')
 
         stdin, stdout, stderr = ssh.exec_command("sh ~/new.sh")
         output  = stdout.readlines()
@@ -14,7 +14,7 @@ def main_funtion(ip):
         print(output)
         print(ip, ": ", error)
 
-node_list = ['10.74.254.196', '10.74.254.155', '10.74.253.55', '10.74.255.94']
+node_list = ['ip1', 'ip2', 'ip3', 'ip4']
 
 threads = []
 
