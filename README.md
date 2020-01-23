@@ -10,3 +10,5 @@ User should pass a file which contains all the IPs of the nodes, over which host
 This code supports 3.x versions of OpenShift.
 
 All the neccessary file; i.e., exec.py, versionFile.yaml and file with ip list should be located in the same folder.
+
+NOTE: The directory openshift-host-preparation is a snippet with use of paramiko and multithreading together.
