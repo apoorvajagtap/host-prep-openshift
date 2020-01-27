@@ -79,7 +79,7 @@ def checkthreading():
     except:
         print("FILE NOT FOUND")
         exit(1)
-    if (os.stat(ipFile).st_size != 0):
+    if (os.stat(ipFile).st_size > 0):
         for ip in fp.readlines():
             p = Process(target=executeCommand, args=(ip, failedIpDict, ))
             p.start()
